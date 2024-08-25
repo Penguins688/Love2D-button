@@ -10,6 +10,9 @@ function Button:new(x, y, width, height, text, r, g, b, r2, g2, b2, fsize)
         r = r,
         g = g,
         b = b,
+        r2 = r2,
+        g2 = g2,
+        b2 = b2,
         fsize = fsize,
         clicked = false 
     }
