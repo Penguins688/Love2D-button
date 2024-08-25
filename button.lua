@@ -22,6 +22,7 @@ function Button:new(x, y, width, height, text, r, g, b, r2, g2, b2, fsize)
 end
 
 function Button:draw()
+    local font = love.graphics.newFont(self.fsize)
     if self:isMouseOver() then
         love.graphics.setColor(self.r, self.g, self.b)
     else
@@ -31,7 +32,7 @@ function Button:draw()
     love.graphics.rectangle("fill", self.x, self.y, self.width, self.height)
 
     love.graphics.setColor(1, 1, 1)
-    love.graphics.setFont(love.graphics.newFont(self.fsize))
+    love.graphics.setFont(font)
     love.graphics.setLineWidth(5)
     love.graphics.rectangle("line", self.x, self.y, self.width, self.height)
 
